@@ -1,21 +1,21 @@
+from itertools import count
 import sys
-
 input = sys.stdin.readline
 
-# 입력 받기
-n, m = map(int, input().split())
-string_set = set()
-
-# 문자열 집합 입력
-for _ in range(n):
-    string_set.add(input().strip())
-
-# 확인할 문자열 개수
+# set 사용
+s = set()
 count = 0
-for _ in range(m):
-    query = input().strip()
-    if query in string_set:
-        count += 1
+n, m = map(int, input().split())
 
-# 결과 출력
+for _ in range(n):
+    data = input().rstrip()
+    s.add(data) # set은 add로 데이터 추가
+
+# s = set([input().rstrip() for _ in range(n)])
+
+for _ in range(m):
+    data = input().rstrip()
+    if data in s:
+        count+=1
+
 print(count)
