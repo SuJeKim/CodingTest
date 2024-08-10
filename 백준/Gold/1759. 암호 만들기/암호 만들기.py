@@ -10,12 +10,12 @@ def back_tracking(cnt, idx):
 
         for i in range(l):
             if answer[i] in consonant:
-                vo += 1
-            else:
                 co += 1
+            else:
+                vo += 1
 
         # 모음 1개 이상, 자음 2개 이상
-        if vo >= 1 and co >= 2:
+        if co >= 1 and vo >= 2:
             print("".join(answer))
 
         return
