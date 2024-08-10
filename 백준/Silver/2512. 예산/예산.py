@@ -16,4 +16,4 @@ while start <= end:
         start = mid + 1
     else:  # M초과 이면 시작 ~ 중앙값-1 값 다시 찾기
         end = mid - 1
-print(result)
+print(end)
