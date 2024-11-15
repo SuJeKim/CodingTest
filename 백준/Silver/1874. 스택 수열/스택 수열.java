@@ -23,9 +23,9 @@ public class Main {
 				for(int i = start; i <= value; i++) {
 					stack.push(i);
 					sb.append('+').append('\n');	
+                    start++;
 				}
-				// stack에 4까지 존재했으니까 그 다음 수 5부터 채워야 함.
-				start = value + 1;
+				
 			}
 			
 			// value != stack의 top 
