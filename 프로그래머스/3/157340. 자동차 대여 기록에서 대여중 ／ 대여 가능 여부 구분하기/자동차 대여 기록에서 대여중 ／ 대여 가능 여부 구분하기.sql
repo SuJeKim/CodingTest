@@ -1,0 +1,10 @@
+# 차 기종에서 하나라도 범위 내에 있으면 대여중.
+SELECT CAR_ID,
+    CASE
+        WHEN MAX(START_DATE <= DATE('2022-10-16') AND END_DATE >= DATE('2022-10-16')) = 1
+            THEN '대여중'
+        ELSE '대여 가능'
+    END AS AVAILABILITY
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+GROUP BY CAR_ID
+ORDER BY CAR_ID DESC
