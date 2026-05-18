@@ -1,6 +1,6 @@
 class Solution {
     public int solution(int num) {
-        long n = num;
+        long n = num; //오버플로우 방지
         int answer = 0;
         if(num == 1) return answer;
         
